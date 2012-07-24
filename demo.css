@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+/*
+**--------------------------------------------------------------------------
+**
+** Normalize:
+**
+**--------------------------------------------------------------------------
+*/
+
+/* rgne.ws/LRBoG6 (slightly modified) */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif;color:#222}body{margin:0;font-size:1em;line-height:1.4}::-moz-selection{background:#98adca;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}ins{background:#ff9;color:#000;text-decoration:none}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:"";content:none}small{font-size:85%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;vertical-align:middle;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top;resize:vertical}table{border-collapse:collapse;border-spacing:0}td{vertical-align:top}
+
+/*
+**--------------------------------------------------------------------------
+**
+** Demo-specific styles:
+**
+**--------------------------------------------------------------------------
+*/
+
+body { font-family: Arial, sans-serif; } /* Serif: Cambria, Georgia, serif; */
+
+.container { margin-top: 10px; }
+
+header { position: relative; }
+
+h1 {
+	font-family: Cambria, Georgia, serif;
+	text-rendering: optimizeLegibility;
+	letter-spacing: -.05em;
+	line-height: 1;
+	*line-height: normal; /* rgne.ws/NPEsju */
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** Desktop menu:
+**
+**--------------------------------------------------------------------------
+*/
+
+/* If Javascript is turned on, hide the desktop menu: */
+
+.js #megawhale { display: none; }
+
+/* If Javascript is turned off, hide desktop menu <div>s: */
+
+.mw-div {
+	position: absolute;
+	left: -999em;
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** Mobile menu:
+**
+**--------------------------------------------------------------------------
+*/
+
+/*
+**----------------------------------
+** Main wrapper div:
+**----------------------------------
+*/
+
+.megakrill {
+	float: left;
+	width: 100%;
+}
+
+/*
+**----------------------------------
+** Toggle button:
+**----------------------------------
+*/
+
+.mk-toggle {
+	width: 49px;
+	height: 49px;
+	float: right;
+	display: inline;
+	_overflow: hidden; /* rgne.ws/KMrbW3 */
+}
+	.mk-toggle a {
+		line-height: 1;
+		background-color: #000;
+		background-image: url(/jquery-megakrill/megakrill/images/toggle.png);
+		_background-image: url(/jquery-megakrill/megakrill/images/toggle.gif);
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		display: block;
+		overflow: hidden;
+		/* rgne.ws/SHv2bc */
+		-webkit-user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.mk-toggle a:active,
+	.mk-toggle a:focus { outline: none; }
+	.mk-toggle a.mk-opened {
+		background-color: #333;
+		background-position: 0 -49px;
+	}
+
+/*
+**----------------------------------
+** Menu structure:
+**----------------------------------
+*/
+
+.mw-ul,
+.mw-li {
+	margin: 0;
+	padding: 0;
+}
+.mw-ul {
+	width: 100%;
+	float: left;
+	display: inline;
+	clear: both;
+	*clear: none; /* rgne.ws/MrnTJt */
+}
+	.mw-li {
+		width: 100%;
+		float: left;
+		display: inline;
+	}
+	.mw-a { display: block; }
+
+/*
+**----------------------------------
+** Menu skin:
+**----------------------------------
+*/
+
+.mw-ul { background: #222; } /* Same color as <li> borders. */
+	.mw-li { border-bottom: 1px solid #222; }
+		.mw-li:last-child { border-bottom: 0; }
+		.mw-a {
+			letter-spacing: .05em;
+			line-height: 1;
+			text-decoration: none;
+			background-color: #333;
+			background-image: url(/jquery-megakrill/megakrill/images/arrow.png);
+			_background-image: url(/jquery-megakrill/megakrill/images/arrow.gif);
+			background-repeat: no-repeat;
+			background-position: right center;
+			padding: 15px 10px;
+		}
+		.mw-a,
+		.mw-a:visited,
+		.mw-a:visited:hover,
+		.mw-a:focus,
+		.mw-a:focus:hover,
+		.mw-a:hover,
+		.mw-a:active { color: #fff; }
+		.mw-a:active,
+		.mw-a:focus { outline: none; }
+
+/*
+**--------------------------------------------------------------------------
+**
+** Retina display at < 1320px width:
+** rgne.ws/M1CLgG
+**
+**--------------------------------------------------------------------------
+*/
+
+@media
+only screen and (max-width: 1319px) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 1319px) and (-o-min-device-pixel-ratio: 3/2),
+only screen and (max-width: 1319px) and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5) {
+	
+	/*
+	**----------------------------------
+	** Toggle button:
+	**----------------------------------
+	*/
+	
+	.mk-toggle a {
+		background-image: url(/jquery-megakrill/megakrill/images/toggle@2x.png);
+		-moz-background-size: 49px 98px;
+		-ie-background-size: 49px 98px;
+		-o-background-size: 49px 98px;
+		-webkit-background-size: 49px 98px;
+		background-size: 49px 98px;
+	}
+	
+	/*
+	**----------------------------------
+	** Menu skin:
+	**----------------------------------
+	*/
+	
+	.mw-a {
+		background-image: url(/jquery-megakrill/megakrill/images/arrow@2x.png);
+		-moz-background-size: 29px 34px;
+		-ie-background-size: 29px 34px;
+		-o-background-size: 29px 34px;
+		-webkit-background-size: 29px 34px;
+		background-size: 29px 34px;
+	}
+	
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** Media queries:
+**
+**--------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 990px) { /* 970px + 20px */
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Demo-specific styles:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	h1 {
+		margin: 0 0 10px;
+		position: static;
+	}
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Globally remove tap highlight:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	html.mw-outside * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } /* rgne.ws/LRzBkh */
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Desktop menu:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	/* If Javascript is turned on, show the desktop menu: */
+	
+	.js #megawhale { display: block; }
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Mobile menu:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	/*
+	**----------------------------------
+	** Main wrapper div:
+	**----------------------------------
+	*/
+	
+	.megakrill { display: none; }
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Override and reset mobile menu styles:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	.mw-ul {
+		background: transparent;
+		width: auto;
+		float: none;
+		display: block;
+		clear: none;
+		*margin-top: 0;
+	}
+		.mw-li {
+			border: 0;
+			width: auto;
+			float: none;
+			display: list-item;
+		}
+		.mw-a {
+			letter-spacing: normal;
+			line-height: normal;
+			text-decoration: none;
+			background-color: transparent;
+			background-image: none;
+			background-repeat: repeat;
+			background-position: 0 0;
+			-moz-background-size: auto;
+			-ie-background-size: auto;
+			-o-background-size: auto;
+			-webkit-background-size: auto;
+			background-size: auto;
+			padding: 0;
+			display: inline;
+		}
+		.mw-a,
+		.mw-a:visited,
+		.mw-a:visited:hover,
+		.mw-a:focus,
+		.mw-a:focus:hover,
+		.mw-a:hover,
+		.mw-a:active { color: #00f; }
+		.mw-a:active,
+		.mw-a:focus { outline: invert none medium; }
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Desktop menu:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	/*
+	**----------------------------------
+	** Menu structure:
+	**----------------------------------
+	*/
+	
+	.mw-ul,
+	.mw-li {
+		margin: 0;
+		padding: 0;
+	}
+	.mw-ul {
+		position: relative;
+		list-style: none;
+		float: left;
+		display: inline;
+		width: 100%;
+	}
+		.mw-li {
+			float: left;
+			display: inline;
+		}
+		.mw-li-orphan { float: right; }
+		.mw-li:hover { *visibility: inherit; }
+			.mw-a { display: block; }
+			.mw-div {
+				position: absolute;
+				left: -999em;
+			}
+				.mw-li:hover .mw-div,
+				.mw-open .mw-div {
+					top: auto;
+					left: 0;
+					z-index: 99;
+				}
+	
+	/*
+	**----------------------------------
+	** Menu skin:
+	**----------------------------------
+	*/
+	
+	.mw-ul { background-color: #000; }
+		.mw-li {}
+			.mw-a {
+				letter-spacing: .05em;
+				text-decoration: none;
+				line-height: 1;
+				border-width: 1px 1px 0;
+				border-style: solid;
+				border-color: #000;
+				background-color: #000;
+				padding: 10px 10px 11px; /* +1px on bottom to account for missing border. */
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			.mw-a-with-div {
+				padding-right: 20px; /* 10px on left to visually balance with arrow on right. */
+				position: relative; /* Needed for IMG arrows. */
+			}
+			.mw-a,
+			.mw-a:visited { color: #fff; }
+			/* See HTML for related JS: */
+			.no-touch .mw-a:visited:hover,
+			.no-touch .mw-a:focus,
+			.no-touch .mw-a:focus:hover,
+			.no-touch .mw-a:hover,
+			.no-touch .mw-a:active {
+				color: #fff;
+				text-decoration: none;
+				border-color: #ae1b1f;
+				background-color: #ae1b1f;
+				outline: 0;
+			}
+			.mw-open .mw-a,
+			.mw-open .mw-a:visited,
+			.mw-open .mw-a:visited:hover,
+			.mw-open .mw-a:focus,
+			.mw-open .mw-a:focus:hover,
+			.mw-open .mw-a:hover,
+			.mw-open .mw-a:active {
+				color: #000;
+				text-decoration: none;
+				border-color: #ccc;
+				background-color: #fff;
+			}
+			.mw-div {
+				background: #fff;
+				background: rgba(255, 255, 255, .9);
+				border-width: 0 1px 1px;
+				border-style: solid;
+				border-color: #ccc;
+				-moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+				-webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+				box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .25);
+				-webkit-border-radius: 0 0 3px 3px;
+				-moz-border-radius: 0 0 3px 3px;
+				border-radius: 0 0 3px 3px;
+			}
+	
+	/*
+	**----------------------------------
+	** Dropdown width:
+	**----------------------------------
+	*/
+	
+	/*
+		Firefox 13.0.1 exhibits, what appears to be, a positioning rounding bug
+		when scaling the window up/down - Adding .1px appears to fix.
+	*/
+	
+	.mw-div {
+		width: 968.1px; /* -2px for left/right borders. */
+		width: 968px\9; /* IE8 appears to round up. Feeding whole number width for IE<9. */
+	}
+	
+	/*
+	**----------------------------------
+	** Arrows:
+	**----------------------------------
+	*/
+	
+	.mw-ul {}
+		.mw-li {}
+			.mw-a-with-div {
+				*zoom: 1; /* Trigger IE7 hasLayout so <span>s position accurately. */
+				_zoom: normal; /* IE6 goes crazy when hasLayout (above) is set. */
+			}
+				.mw-arrow {
+					text-indent: -999em;
+					background-image: url(/jquery-megawhale/megawhale/images/arrow.png);
+					_background-image: url(/jquery-megawhale/megawhale/images/arrow.gif);
+					background-repeat: no-repeat;
+					width: 8px;
+					height: 4px;
+					margin-top: -2px; /* That's height/2. */
+					_margin: 0;
+					display: block;
+					position: absolute;
+					top: 50%;
+					_top: 1.25em; /* Eyeballing it. */
+					right: 8px;
+					overflow: hidden;
+				}
+				.mw-open .mw-arrow { background-position: 0 -4px; }
+	
+	/*
+	**----------------------------------
+	** Close button:
+	**----------------------------------
+	*/
+	
+	.mw-close {
+		text-indent: -999em;
+		background-image: url(/jquery-megawhale/megawhale/images/close.png);
+		_background-image: url(/jquery-megawhale/megawhale/images/close.gif);
+		background-repeat: no-repeat;
+		width: 32px;
+		height: 32px;
+		display: block;
+		position: absolute;
+		right: 3px;
+		bottom: 1px;
+		overflow: hidden;
+		z-index: 100;
+		cursor: hand;
+		cursor: pointer;
+	}
+	
+}
+
+@media only screen and (min-width: 1320px) { /* 1300px + 20px */
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Desktop menu:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	/*
+	**----------------------------------
+	** Dropdown width:
+	**----------------------------------
+	*/
+	
+	/*
+		IBID.
+	*/
+	
+	.mw-div {
+		width: 1298.1px; /* IBID. */
+		width: 1298px\9; /* IBID. */
+	}
+	
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** Retina display at >= 990 width:
+** rgne.ws/M1CLgG
+**
+**--------------------------------------------------------------------------
+*/
+
+@media
+only screen and (min-width: 990px) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-width: 990px) and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-width: 990px) and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-width: 990px) and (min-device-pixel-ratio: 1.5) {
+	
+	/*
+	**----------------------------------
+	** Arrows:
+	**----------------------------------
+	*/
+	
+	.mw-arrow {
+		background-image: url(/jquery-megawhale/megawhale/images/arrow@2x.png);
+		-moz-background-size: 8px 8px;
+		-ie-background-size: 8px 8px;
+		-o-background-size: 8px 8px;
+		-webkit-background-size: 8px 8px;
+		background-size: 8px 8px;
+	}
+	
+	/*
+	**----------------------------------
+	** Close button:
+	**----------------------------------
+	*/
+	
+	.mw-close {
+		background-image: url(/jquery-megawhale/megawhale/images/close@2x.png);
+		-moz-background-size: 32px 32px;
+		-ie-background-size: 32px 32px;
+		-o-background-size: 32px 32px;
+		-webkit-background-size: 32px 32px;
+		background-size: 32px 32px;
+	}
+	
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** Utility:
+**
+**--------------------------------------------------------------------------
+*/
+
+.clear:before, .clear:after { content: ""; display: table; } .clear:after { clear: both; } .clear { *zoom: 1; } /* rgne.ws/KZHkqq */

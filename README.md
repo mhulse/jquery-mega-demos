@@ -3,6 +3,6 @@
 
 ---
 
-View the [demo](http://registerguard.github.com/mega-demos/).
+View the [demo](http://registerguard.github.com/jquery-mega-demos/).
 
 More information coming soon.

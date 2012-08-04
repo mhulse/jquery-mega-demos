@@ -162,7 +162,10 @@ h1 {
 		.mw-a:focus,
 		.mw-a:focus:hover,
 		.mw-a:hover,
-		.mw-a:active { color: #fff; }
+		.mw-a:active {
+			color: #fff;
+			text-decoration: none;
+		}
 		.mw-a:active,
 		.mw-a:focus { outline: none; }
 

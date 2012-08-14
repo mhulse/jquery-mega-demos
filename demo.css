@@ -460,8 +460,8 @@ only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5) {
 	*/
 	
 	.mw-div {
-		width: 968.1px; /* -2px for left/right borders. */
-		width: 968px\9; /* IE8 appears to round up. Feeding whole number width for IE<9. */
+		width: 978.1px; /* -2px for left/right borders. */
+		width: 978px\9; /* IE8 appears to round up. Feeding whole number width for IE<9. */
 	}
 	
 	/*
@@ -550,8 +550,8 @@ only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5) {
 	*/
 	
 	.mw-div {
-		width: 1298.1px; /* IBID. */
-		width: 1298px\9; /* IBID. */
+		width: 1318.1px; /* IBID. */
+		width: 1318px\9; /* IBID. */
 	}
 	
 }

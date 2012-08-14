@@ -21,7 +21,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 body { font-family: Arial, sans-serif; } /* Serif: Cambria, Georgia, serif; */
 
-.container { margin-top: 10px; }
+.container { margin: 10px; }
 
 header { position: relative; }
 
@@ -224,7 +224,7 @@ only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5) {
 **--------------------------------------------------------------------------
 */
 
-@media only screen and (min-width: 990px) { /* 970px + 20px */
+@media only screen and (min-width: 665px) { /* 640px + 25px */
 	
 	/*
 	**--------------------------------------------------------------------------
@@ -233,6 +233,22 @@ only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5) {
 	**
 	**--------------------------------------------------------------------------
 	*/
+	
+	.container { width: 640px; margin: 10px auto; }
+	
+}
+
+@media only screen and (min-width: 1005px) { /* 980px + 25px */
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Demo-specific styles:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	.container { width: 980px; }
 	
 	h1 {
 		margin: 0 0 10px;
@@ -503,7 +519,17 @@ only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5) {
 	
 }
 
-@media only screen and (min-width: 1320px) { /* 1300px + 20px */
+@media only screen and (min-width: 1345px) { /* 1320px + 25px */
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Demo-specific styles:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	.container { width: 1320px; }
 	
 	/*
 	**--------------------------------------------------------------------------
@@ -533,17 +559,17 @@ only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5) {
 /*
 **--------------------------------------------------------------------------
 **
-** Retina display at >= 990 width:
+** Retina display at >= 1005 width:
 ** rgne.ws/M1CLgG
 **
 **--------------------------------------------------------------------------
 */
 
 @media
-only screen and (min-width: 990px) and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min-width: 990px) and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-width: 990px) and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-width: 990px) and (min-device-pixel-ratio: 1.5) {
+only screen and (min-width: 1005px) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-width: 1005px) and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-width: 1005px) and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-width: 1005px) and (min-device-pixel-ratio: 1.5) {
 	
 	/*
 	**----------------------------------

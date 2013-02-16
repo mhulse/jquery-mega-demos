@@ -1,5 +1,8 @@
 <!doctype html>
-<html class="no-js no-touch">
+<!--[if IE 6]>         <html class="no-js ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7 lt-ie9 lt-ie8">        <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8 lt-ie9">               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js no-touch">                 <!--<![endif]-->
 
 <head>
 	
@@ -9,14 +12,14 @@
 	
 	<title>jQuery MegaWhale &amp; MegaKrill demo</title>
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- rgne.ws/MOkRAX -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	
-	<!-- rgne.ws/N9c4uV & rgne.ws/MuCQZI -->
-	<script>if (('ontouchstart' in window) || (window.DocumentTouch && (document instanceof DocumentTouch))) document.documentElement.className = document.documentElement.className.replace(/\bno-touch\b/,'touch');</script>
+	<!-- rgne.ws/WnP50T -->
+	<script>if(('ontouchstart' in window)||(window.DocumentTouch&&(document instanceof DocumentTouch))){document.documentElement.className=document.documentElement.className.replace(/\bno-touch\b/,'touch')}</script>
 	
-	<!-- rgne.ws/MuCQZI -->
-	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
+	<!-- rgne.ws/WnP50T -->
+	<script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js')</script>
 	
 	<link rel="stylesheet" href="demo.css">
 	
@@ -28,7 +31,7 @@
 	
 	<!-- rgne.ws/PV8KUu -->
 	<!--[if (lt IE 9) & (!IEMobile)]>
-		<script src="plugins/respond-1.1.0.min.js"></script>
+		<script src="plugins/respond.min.js"></script>
 	<![endif]-->
 	
 	<!-- rgne.ws/Orh5cv -->
@@ -187,19 +190,18 @@
 		
 	</div> <!-- /.container -->
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="plugins/ios-orientationchange-fix.js"></script> <!-- rgne.ws/PYrfbZ -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="plugins/jquery.ba-dotimeout.min.js"></script> <!-- rgne.ws/OxeJsB -->
-	<script src="../jquery-megawhale/megawhale/jquery.megawhale-0.1.1.min.js"></script>
-	<script src="../jquery-megakrill/megakrill/jquery.megakrill-0.1.1.min.js"></script>
+	<script src="../jquery-megawhale/megawhale/jquery.megawhale.min.js"></script>
+	<script src="../jquery-megakrill/megakrill/jquery.megakrill.min.js"></script>
 	
-	<script type="text/javascript">
+	<script>
 		<!--
 			
 			$(document).ready(function() {
 				
 				var $megawhale = $('#megawhale'),
-				$html          = $('html');
+				    $html      = $('html');
 				
 				$megawhale
 					.megakrill({
@@ -211,7 +213,7 @@
 						onStartOutside : function() {
 							$html.addClass('mw-outside');
 						},
-						onEndOutside   : function() {
+						onEndOutside : function() {
 							$html.removeClass('mw-outside');
 						}
 					});

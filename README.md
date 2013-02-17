@@ -14,7 +14,7 @@ Just [jQuery **MegaKrill**](https://github.com/registerguard/jquery-megakrill):
 
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-megakrill/&chs=240x240)](http://registerguard.github.com/jquery-megakrill/)
 
-MegaWhale and MegaKrill combined:
+**MegaWhale** and **MegaKrill** combined:
 
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-mega-demos/&chs=240x240)](http://registerguard.github.com/jquery-mega-demos/)
 

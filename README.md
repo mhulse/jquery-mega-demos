@@ -6,13 +6,13 @@
 
 #### DEMO
 
-Just [**MegaWhale**](http://registerguard.github.com/jquery-megawhale/demo/):
-
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-megawhale/&chs=240x240)](http://registerguard.github.com/jquery-megawhale/demo/)
-
 Just [**MegaKrill**](https://github.com/registerguard/jquery-megakrill):
 
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-megakrill/&chs=240x240)](http://registerguard.github.com/jquery-megakrill/)
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-megakrill/&chs=240x240)](http://registerguard.github.com/jquery-megakrill/demo/)
+
+Just [**MegaWhale**](http://registerguard.github.com/jquery-megawhale/):
+
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-megawhale/&chs=240x240)](http://registerguard.github.com/jquery-megawhale/demo/)
 
 **MegaWhale** and **MegaKrill** combined:
 

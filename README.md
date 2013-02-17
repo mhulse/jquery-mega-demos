@@ -22,6 +22,12 @@ Resize the browser window to see the plugin(s) in action (Firefox 15+ users, che
 
 ---
 
+#### COMPATABILITY
+
+A list of tested devices and browsers can be [found in the WIKI](https://github.com/registerguard/jquery-mega-demos/wiki).
+
+---
+
 #### LEGAL
 
 Copyright © 2013 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://registerguard.com)

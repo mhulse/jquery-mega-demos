@@ -10,7 +10,7 @@ Just [**MegaWhale**](http://registerguard.github.com/jquery-megawhale/demo/):
 
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-megawhale/&chs=240x240)](http://registerguard.github.com/jquery-megawhale/demo/)
 
-Just [jQuery **MegaKrill**](https://github.com/registerguard/jquery-megakrill):
+Just [**MegaKrill**](https://github.com/registerguard/jquery-megakrill):
 
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/jquery-megakrill/&chs=240x240)](http://registerguard.github.com/jquery-megakrill/)
 

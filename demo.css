@@ -41,6 +41,12 @@ h1 {
 		position: static;
 	}
 
+.wrap { padding: 20px; }
+	.wrap .wrap {
+		margin: 10px 0;
+		padding: 0;
+	}
+
 @media only screen and (min-width: 665px) {
 	
 	.container {

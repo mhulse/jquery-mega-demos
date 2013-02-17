@@ -76,11 +76,6 @@ h1 {
 	
 	.container { width: 1320px; }
 	
-	h1 {
-		margin: 0 0 10px;
-		position: static;
-	}
-	
 }
 
 .clear:before, .clear:after { content: ""; display: table; } .clear:after { clear: both; } .clear { *zoom: 1; } /* rgne.ws/KZHkqq */
@@ -140,8 +135,8 @@ h1 {
 	.mk-toggle a {
 		line-height: 1;
 		background-color: #000;
-		background-image: url(/jquery-megakrill/megakrill/images/toggle.png);
-		_background-image: url(/jquery-megakrill/megakrill/images/toggle.gif);
+		background-image: url(../jquery-megakrill/megakrill/images/toggle.png);
+		_background-image: url(../jquery-megakrill/megakrill/images/toggle.gif);
 		background-repeat: no-repeat;
 		width: 100%;
 		height: 100%;
@@ -183,8 +178,8 @@ h1 {
 		display: inline;
 	}
 	.mw-a {
-		display: block;
 		_width: 100%; /* rgne.ws/Z9RSis */
+		display: block;
 	}
 
 /*
@@ -201,8 +196,8 @@ h1 {
 			line-height: 1;
 			text-decoration: none;
 			background-color: #333;
-			background-image: url(/jquery-megakrill/megakrill/images/arrow.png);
-			_background-image: url(/jquery-megakrill/megakrill/images/arrow.gif);
+			background-image: url(../jquery-megakrill/megakrill/images/arrow.png);
+			_background-image: url(../jquery-megakrill/megakrill/images/arrow.gif);
 			background-repeat: no-repeat;
 			background-position: right center;
 			padding: 15px 10px;
@@ -223,19 +218,19 @@ h1 {
 /*
 **--------------------------------------------------------------------------
 **
-** Retina display at < 1320px width:
+** Retina display at < 1005px width:
 ** rgne.ws/M1CLgG
 **
 **--------------------------------------------------------------------------
 */
 
 @media /* https://github.com/GoalSmashers/clean-css/issues/66 */
-only screen and (max-width: 1319px) and (min--moz-device-pixel-ratio: 1.5),
-only screen and (max-width: 1319px) and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (max-width: 1319px) and (-o-min-device-pixel-ratio: 3/2),
-only screen and (max-width: 1319px) and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (max-width: 1319px) and (min-device-pixel-ratio: 1.5),
-only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
+only screen and (max-width: 1004px) and (min--moz-device-pixel-ratio: 1.5),
+only screen and (max-width: 1004px) and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 1004px) and (-o-min-device-pixel-ratio: 3/2),
+only screen and (max-width: 1004px) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 1004px) and (min-device-pixel-ratio: 1.5),
+only screen and (max-width: 1004px) and (min-resolution: 1.5dppx) {
 	
 	/* @BUG: https://github.com/registerguard/jquery-megakrill/issues/14 */
 	
@@ -246,14 +241,14 @@ only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
 	*/
 	
 	.mk-toggle a {
-		background-image: url(/jquery-megakrill/megakrill/images/toggle@2x.png);
+		background-image: url(../jquery-megakrill/megakrill/images/toggle@2x.png);
 		-webkit-background-size: 49px 98px;
 		   -moz-background-size: 49px 98px;
 		    -ie-background-size: 49px 98px;
 		     -o-background-size: 49px 98px;
 		        background-size: 49px 98px;
 	}
-		.lt-ie9 .mk-toggle a { background-image: url(/jquery-megakrill/megakrill/images/toggle.gif); }
+		.lt-ie9 .mk-toggle a { background-image: url(../jquery-megakrill/megakrill/images/toggle.gif); }
 	
 	/*
 	**----------------------------------
@@ -262,14 +257,14 @@ only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
 	*/
 	
 	.mw-a {
-		background-image: url(/jquery-megakrill/megakrill/images/arrow@2x.png);
+		background-image: url(../jquery-megakrill/megakrill/images/arrow@2x.png);
 		-webkit-background-size: 29px 34px;
 		   -moz-background-size: 29px 34px;
 		    -ie-background-size: 29px 34px;
 		     -o-background-size: 29px 34px;
 		        background-size: 29px 34px;
 	}
-		.lt-ie9 .mw-a { background-image: url(/jquery-megakrill/megakrill/images/arrow.gif); }
+		.lt-ie9 .mw-a { background-image: url(../jquery-megakrill/megakrill/images/arrow.gif); }
 	
 }
 
@@ -348,6 +343,7 @@ only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
 			    -ie-background-size: auto;
 			     -o-background-size: auto;
 			        background-size: auto;
+			_width: auto;
 			padding: 0;
 			display: inline;
 		}
@@ -429,7 +425,12 @@ only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
 				position: relative; /* Needed for IMG arrows. */
 			}
 			.mw-a,
-			.mw-a:visited { color: #fff; }
+			.mw-a:visited,
+			.mw-a:visited:hover,
+			.mw-a:focus,
+			.mw-a:focus:hover,
+			.mw-a:hover,
+			.mw-a:active { color: #fff; } /* rgne.ws/XXNCxL */
 			/* See HTML for related JS: */
 			.no-touch .mw-a:visited:hover,
 			.no-touch .mw-a:focus,
@@ -498,8 +499,8 @@ only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
 			}
 				.mw-arrow {
 					text-indent: -999em;
-					background-image: url(/jquery-megawhale/megawhale/images/arrow.png);
-					_background-image: url(/jquery-megawhale/megawhale/images/arrow.gif);
+					background-image: url(../jquery-megawhale/megawhale/images/arrow.png);
+					_background-image: url(../jquery-megawhale/megawhale/images/arrow.gif);
 					background-repeat: no-repeat;
 					width: 8px;
 					height: 4px;
@@ -522,8 +523,8 @@ only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
 	
 	.mw-close {
 		text-indent: -999em;
-		background-image: url(/jquery-megawhale/megawhale/images/close.png);
-		_background-image: url(/jquery-megawhale/megawhale/images/close.gif);
+		background-image: url(../jquery-megawhale/megawhale/images/close.png);
+		_background-image: url(../jquery-megawhale/megawhale/images/close.gif);
 		background-repeat: no-repeat;
 		width: 32px;
 		height: 32px;
@@ -535,33 +536,6 @@ only screen and (max-width: 1319px) and (min-resolution: 1.5dppx) {
 		z-index: 100;
 		cursor: hand;
 		cursor: pointer;
-	}
-	
-}
-
-@media only screen and (min-width: 1345px) {
-	
-	/*
-	**--------------------------------------------------------------------------
-	**
-	** Desktop menu:
-	**
-	**--------------------------------------------------------------------------
-	*/
-	
-	/*
-	**----------------------------------
-	** Dropdown width:
-	**----------------------------------
-	*/
-	
-	/*
-		IBID.
-	*/
-	
-	.mw-div {
-		width: 1318.1px; /* IBID. */
-		width: 1318px\9; /* IBID. */
 	}
 	
 }
@@ -592,14 +566,14 @@ only screen and (min-width: 1005px) and (min-resolution: 1.5dppx) {
 	*/
 	
 	.mw-arrow {
-		background-image: url(/jquery-megawhale/megawhale/images/arrow@2x.png);
+		background-image: url(../jquery-megawhale/megawhale/images/arrow@2x.png);
 		-webkit-background-size: 8px 8px;
 		   -moz-background-size: 8px 8px;
 		    -ie-background-size: 8px 8px;
 		     -o-background-size: 8px 8px;
 		        background-size: 8px 8px;
 	}
-		.lt-ie9 .mw-arrow { background-image: url(/jquery-megawhale/megawhale/images/arrow.gif); }
+		.lt-ie9 .mw-arrow { background-image: url(../jquery-megawhale/megawhale/images/arrow.gif); }
 	
 	/*
 	**----------------------------------
@@ -608,13 +582,40 @@ only screen and (min-width: 1005px) and (min-resolution: 1.5dppx) {
 	*/
 	
 	.mw-close {
-		background-image: url(/jquery-megawhale/megawhale/images/close@2x.png);
+		background-image: url(../jquery-megawhale/megawhale/images/close@2x.png);
 		-webkit-background-size: 32px 32px;
 		   -moz-background-size: 32px 32px;
 		    -ie-background-size: 32px 32px;
 		     -o-background-size: 32px 32px;
 		        background-size: 32px 32px;
 	}
-		.lt-ie9 .mw-close { background-image: url(/jquery-megawhale/megawhale/images/close.gif); }
+		.lt-ie9 .mw-close { background-image: url(../jquery-megawhale/megawhale/images/close.gif); }
+	
+}
+
+@media only screen and (min-width: 1345px) {
+	
+	/*
+	**--------------------------------------------------------------------------
+	**
+	** Desktop menu:
+	**
+	**--------------------------------------------------------------------------
+	*/
+	
+	/*
+	**----------------------------------
+	** Dropdown width:
+	**----------------------------------
+	*/
+	
+	/*
+		IBID.
+	*/
+	
+	.mw-div {
+		width: 1318.1px; /* IBID. */
+		width: 1318px\9; /* IBID. */
+	}
 	
 }
